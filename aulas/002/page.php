@@ -1,17 +1,19 @@
-﻿<!-- DEBUG -->
+<!-- DEBUG -->
 <!-- O include da aula foi feito com sucesso! -->
 
-<h3>Mensagens</h3>
-<button type="button" id="ms-reload">Recarregar mensagens</button>
-<div id="ms-container" style="padding: 20px; border: 1px solid #2D2D2D;"></div>
+<p>Hora: <span id="up-time"></span></p>
+<button type="button" id="btn-up-time">Atualizar hora</button>
 
 <script>
 	setTimeout(function(){
 		//Inicia ajax quando clicar no button
-		$('#ms-reload').click(up_messages);
+		$('#btn-up-time').click(up_time);
+		
+		//Atualiza hora com dados do servidor
+		up_time();
 	},1000);
 	
-	function up_messages(){
+	function up_time(){
 		// DEBUG
 		// console.log('O ajax foi iniciado com sucesso!');
 		
@@ -25,7 +27,7 @@
 			
 			//Valida se requisicao retornou 'ok'
 			if(this.readyState == 4 && this.status == 200){
-				$('#ms-container').html(this.responseText);
+				$('#up-time').html(this.responseText);
 			}
 			
 			//Valida se requisicao retornou erro
@@ -35,10 +37,10 @@
 		}
 		
 		//Cria parametros para a requisicao
-		ajax_rq_ob.open('GET', '001/messages.php', true);
+		ajax_rq_ob.open('GET', '002/time.php?t=<?php echo time(); ?>', true);
 		
 		//Envia requisicao para servidor
-		ajax_rq_ob.send();
+		ajax_rq_ob.send(); 
 		
 		// -------------------------------- AJAX - FIM -------------------------------- //
 	}

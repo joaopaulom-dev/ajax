@@ -10,6 +10,7 @@
     <h2>Curso AJAX - Aulas</h2>
 	<ul>
 		<li><a href="http://localhost/AJAX/aulas/index.php?p=001">001</a>
+		<li><a href="http://localhost/AJAX/aulas/index.php?p=002">002</a>
 	</ul>
 	<br>
 	<hr>
