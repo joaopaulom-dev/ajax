@@ -11,6 +11,7 @@
 	<ul>
 		<li><a href="http://localhost/AJAX/aulas/index.php?p=001">001</a>
 		<li><a href="http://localhost/AJAX/aulas/index.php?p=002">002</a>
+		<li><a href="http://localhost/AJAX/aulas/index.php?p=003">003</a>
 	</ul>
 	<br>
 	<hr>
